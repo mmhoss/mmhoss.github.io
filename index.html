@@ -98,3 +98,197 @@
       padding: 1.5rem;
       transition: border-color .2s, transform .2s;
     }
+    .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .card-icon { font-size: 1.8rem; margin-bottom: .75rem; }
+    .card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+    .card p { font-size: .875rem; color: var(--muted); }
+
+    /* ── Skills ── */
+    .skills { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+    .skill {
+      background: rgba(124,106,247,.1);
+      border: 1px solid rgba(124,106,247,.25);
+      color: var(--accent);
+      border-radius: 6px;
+      padding: .3rem .75rem;
+      font-size: .82rem; font-weight: 500;
+    }
+
+    /* ── Timeline ── */
+    .timeline { display: flex; flex-direction: column; gap: 1.5rem; }
+    .tl-item { display: flex; gap: 1.25rem; }
+    .tl-dot {
+      flex-shrink: 0;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: .45rem;
+      box-shadow: 0 0 8px var(--accent);
+    }
+    .tl-body h3 { font-size: .95rem; font-weight: 700; }
+    .tl-meta { font-size: .8rem; color: var(--accent2); margin-bottom: .25rem; }
+    .tl-body p { font-size: .875rem; color: var(--muted); }
+
+    /* ── Contact ── */
+    .contact-grid {
+      display: grid; gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none; color: var(--text);
+      display: flex; align-items: center; gap: .75rem;
+      transition: border-color .2s, transform .2s;
+    }
+    .contact-card:hover { border-color: var(--accent2); transform: translateY(-2px); }
+    .contact-card span { font-size: 1.4rem; }
+    .contact-card div small { color: var(--muted); font-size: .78rem; }
+    .contact-card div strong { font-size: .9rem; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: .8rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">mmhoss</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="tag">Open to opportunities</div>
+  <h1>Hi, I'm <span>mmhoss</span>.<br/>I build things for the web.</h1>
+  <p class="hero-sub">
+    A software engineer passionate about creating elegant, performant, and accessible digital experiences.
+  </p>
+  <div class="btn-row">
+    <a href="#projects" class="btn btn-primary">View my work</a>
+    <a href="#contact" class="btn btn-outline">Get in touch</a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <h2>About</h2>
+  <p class="section-sub">A little about me and my stack.</p>
+  <p style="color:var(--muted); margin-bottom:1.5rem; max-width:660px;">
+    I'm a software engineer who loves turning complex problems into simple, beautiful solutions.
+    I care deeply about code quality, developer experience, and building software that scales.
+  </p>
+  <div class="skills">
+    <span class="skill">Python</span>
+    <span class="skill">JavaScript</span>
+    <span class="skill">TypeScript</span>
+    <span class="skill">React</span>
+    <span class="skill">Node.js</span>
+    <span class="skill">Docker</span>
+    <span class="skill">PostgreSQL</span>
+    <span class="skill">AWS</span>
+    <span class="skill">Git</span>
+    <span class="skill">Linux</span>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="section-sub">Things I've built.</p>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">🚀</div>
+      <h3>Project One</h3>
+      <p>A full-stack web application built with React and Node.js. Features real-time updates, authentication, and a responsive UI.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h3>Project Two</h3>
+      <p>An automation tool that streamlines workflows using Python, reducing manual effort by over 80%.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Project Three</h3>
+      <p>A data visualization dashboard that surfaces key metrics from multiple data sources with interactive charts.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔒</div>
+      <h3>Project Four</h3>
+      <p>A security-focused API gateway with rate limiting, JWT authentication, and detailed audit logging.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <h2>Experience</h2>
+  <p class="section-sub">Where I've worked and what I've done.</p>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <h3>Software Engineer</h3>
+        <div class="tl-meta">Company Name · 2023 – Present</div>
+        <p>Building and maintaining production services serving millions of users. Driving architectural decisions and mentoring junior developers.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <h3>Software Developer</h3>
+        <div class="tl-meta">Previous Company · 2021 – 2023</div>
+        <p>Developed full-stack features across multiple product lines. Improved CI/CD pipelines and reduced deployment time by 40%.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-body">
+        <h3>B.S. Computer Science</h3>
+        <div class="tl-meta">University · 2017 – 2021</div>
+        <p>Graduated with honors. Focus areas: algorithms, distributed systems, and software engineering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="section-sub">Let's connect.</p>
+  <div class="contact-grid">
+    <a href="https://github.com/mmhoss" target="_blank" rel="noopener" class="contact-card">
+      <span>🐙</span>
+      <div><small>GitHub</small><br/><strong>mmhoss</strong></div>
+    </a>
+    <a href="mailto:hello@mmhoss.dev" class="contact-card">
+      <span>✉️</span>
+      <div><small>Email</small><br/><strong>hello@mmhoss.dev</strong></div>
+    </a>
+    <a href="https://linkedin.com/in/mmhoss" target="_blank" rel="noopener" class="contact-card">
+      <span>💼</span>
+      <div><small>LinkedIn</small><br/><strong>mmhoss</strong></div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>Built with HTML, CSS &amp; GitHub Pages · © 2026 mmhoss</p>
+</footer>
+
+</body>
+</html>
+    
